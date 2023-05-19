@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test root page component Renders Left title 1`] = `
+<div
+  className="h-screen md:h-full flex gap-1 items-center p-5 justify-center md:justify-between"
+>
+  <section
+    className="h-full w-full flex flex-col items-center justify-center"
+  >
+    <p
+      className="text-4xl font-semibold"
+      data-testid="left-title-text"
+    >
+      Get Your Daily
+       
+      <span
+        className="text-5xl text-primary font-extrabold"
+      >
+        WORK
+      </span>
+       
+      Done!!
+    </p>
+    <button
+      className="ant-btn css-dev-only-do-not-override-15rg2km ant-btn-default m-5 h-12 px-8 py-2 bg-primary text-md font-semibold"
+      disabled={false}
+      onClick={[Function]}
+      style={
+        {
+          "border": "none",
+          "color": "inherit",
+        }
+      }
+      type="button"
+    >
+      <span>
+        Get Started
+      </span>
+    </button>
+  </section>
+  <section
+    className="h-full mt-3 w-full hidden md:flex items-center justify-center "
+  >
+    <div
+      className="-rotate-6"
+    >
+      <div
+        width="100%"
+      />
+    </div>
+  </section>
+</div>
+`;

@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-light: #333333;
+  --background-start-light: #F2F2F2;
+  --foreground-dark: #F5F5F5;
+  --background-start-dark: #333333;
+}
+
+.dark-theme {
+  color: var(--foreground-dark);
+  background: var(--background-start-dark);
+}
+
+body{
+  transition: 1s ease;
+  color: var(--foreground-light);
+  background: var(--background-start-light);
+}
+
+svg { vertical-align: baseline; }

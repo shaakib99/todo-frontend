@@ -36,4 +36,4 @@ jobs:
       - name: Run Tests
         run: npm run ctest
       - name: Build with Next.js
-        run:  next build
+        run:  npm run build

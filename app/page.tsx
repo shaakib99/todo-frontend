@@ -16,7 +16,7 @@ export default function Home() {
       <section className="h-full w-full flex flex-col items-center justify-center">
         <p className="text-4xl font-semibold" data-testid="left-title-text">
           Get Your Daily{" "}
-          <span className="text-5xl text-primary font-extrabold">WORKS</span>{" "}
+          <span className="text-5xl text-primary font-extrabold">WORK</span>{" "}
           Done!!
         </p>
         <Button

@@ -1,7 +1,7 @@
 "use client";
 
 import { useLottie } from "lottie-react";
-import * as todoAnimationData from "../Assets/lottiefiles/todos-away.json";
+import * as todoAnimationData from "../public/assets/lottiefiles/todos-away.json";
 import { Button } from "antd";
 
 export default function Home() {

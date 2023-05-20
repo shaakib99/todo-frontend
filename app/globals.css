@@ -4,20 +4,41 @@
 
 :root {
   --foreground-light: #333333;
-  --background-start-light: #F2F2F2;
-  --foreground-dark: #F5F5F5;
+  --background-start-light: #fafafa;
+  --foreground-dark: #fafafa;
   --background-start-dark: #333333;
+  --text-color-light: #fafafa;
+  --text-color-dark: #494545;
 }
 
 .dark-theme {
-  color: var(--foreground-dark);
+  color: var(--text-color-light);
   background: var(--background-start-dark);
 }
 
-body{
+body {
   transition: 1s ease;
-  color: var(--foreground-light);
+  color: var(--text-color-dark);
   background: var(--background-start-light);
 }
 
-svg { vertical-align: baseline; }
+svg {
+  vertical-align: baseline;
+}
+
+/* Override Ant Design styles */
+.ant-form-item-label label,
+.ant-form-item-label > span,
+.ant-input,
+.ant-input-password,
+.ant-form,
+.ant-form-item,
+.ant-divider {
+  color: inherit !important;
+  background-color: inherit !important;
+  border-color: inherit !important;
+}
+
+.ant-btn {
+  color: inherit !important;
+}

@@ -2,7 +2,7 @@
 
 import { APP_NAME } from "../../utils/constants";
 import { useLottie } from "lottie-react";
-import * as toggleThemeButton from "../../Assets/lottiefiles/toggle-dark-mode-light-mode-themes.json";
+import * as toggleThemeButton from "../../public/assets/lottiefiles/toggle-dark-mode-light-mode-themes.json";
 import { useDarkTheme } from "../hooks/use-dark-theme.hook";
 import { usePathname } from "next/navigation";
 import Link from "next/link";

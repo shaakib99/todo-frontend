@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test root page component Renders Left title 1`] = `
+exports[`<Home /> Match Snapshot 1`] = `
 <div
   className="h-screen md:h-full flex gap-1 items-center p-5 justify-center md:justify-between"
 >

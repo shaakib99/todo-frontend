@@ -8,5 +8,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <div className="flex items-center justify-center h-full w-full">
+      {children}
+    </div>
+  );
 }

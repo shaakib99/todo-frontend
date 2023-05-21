@@ -24,10 +24,6 @@ export default function Registration() {
         >
           <Input
             className="h-10"
-            style={{
-              color: "inherit",
-              backgroundColor: "inherit",
-            }}
           />
         </Form.Item>
         <Form.Item
@@ -45,10 +41,6 @@ export default function Registration() {
         >
           <Input
             className="h-10"
-            style={{
-              color: "inherit",
-              backgroundColor: "inherit",
-            }}
           />
         </Form.Item>
         <Form.Item

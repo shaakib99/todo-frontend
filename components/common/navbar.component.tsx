@@ -52,7 +52,7 @@ export const Navbar = () => {
       </section>
       <section className="flex gap-5 items-center">
         <Link
-          href="/register"
+          href="/registration"
           className={`${
             pathName === "/registration" && "text-primary"
           } hover:font-semibold`}
@@ -60,9 +60,9 @@ export const Navbar = () => {
           Register
         </Link>
         <Link
-          href="login"
+          href="/login"
           className={`${
-            pathName === "/login" && "font-semibold"
+            pathName === "/login" && "text-primary"
           } hover:font-semibold`}
         >
           Login

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Registration /> Match Snapshot 1`] = `
+exports[`<Login /> Match Snapshot 1`] = `
 <section
   className="h-auto min-w-min  m-5 w-11/12 md:w-1/2 py-5 px-2 flex flex-col items-center shadow-md"
   style={
@@ -12,60 +12,13 @@ exports[`<Registration /> Match Snapshot 1`] = `
   <h1
     className="font-bold text-3xl m-5"
   >
-    Registration
+    Login
   </h1>
   <form
     className="ant-form ant-form-horizontal css-dev-only-do-not-override-15rg2km flex flex-col items-center justify-center w-full px-24"
     onReset={[Function]}
     onSubmit={[Function]}
   >
-    <div
-      className="ant-form-item w-11/12 m-2 css-dev-only-do-not-override-15rg2km"
-    >
-      <div
-        className="ant-row ant-form-item-row css-dev-only-do-not-override-15rg2km"
-        style={{}}
-      >
-        <div
-          className="ant-col ant-col-6 ant-form-item-label css-dev-only-do-not-override-15rg2km"
-          style={{}}
-        >
-          <label
-            className="ant-form-item-required ant-form-item-no-colon"
-            htmlFor="name"
-            title="Name"
-          >
-            Name
-          </label>
-        </div>
-        <div
-          className="ant-col ant-col-18 ant-form-item-control css-dev-only-do-not-override-15rg2km"
-          style={{}}
-        >
-          <div
-            className="ant-form-item-control-input"
-          >
-            <div
-              className="ant-form-item-control-input-content"
-            >
-              <input
-                aria-required="true"
-                className="ant-input css-dev-only-do-not-override-15rg2km h-10"
-                disabled={false}
-                id="name"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                style={{}}
-                type="text"
-                value=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div
       className="ant-form-item w-11/12 m-2 css-dev-only-do-not-override-15rg2km"
     >
@@ -196,6 +149,62 @@ exports[`<Registration /> Match Snapshot 1`] = `
       </div>
     </div>
     <div
+      className="ant-form-item w-11/12 m-2 css-dev-only-do-not-override-15rg2km"
+    >
+      <div
+        className="ant-row ant-form-item-row css-dev-only-do-not-override-15rg2km"
+        style={{}}
+      >
+        <div
+          className="ant-col ant-col-6 ant-form-item-label css-dev-only-do-not-override-15rg2km"
+          style={{}}
+        >
+          <label
+            className="ant-form-item-no-colon"
+            htmlFor="rememberme"
+            title=" "
+          >
+             
+          </label>
+        </div>
+        <div
+          className="ant-col ant-col-18 ant-form-item-control css-dev-only-do-not-override-15rg2km"
+          style={{}}
+        >
+          <div
+            className="ant-form-item-control-input"
+          >
+            <div
+              className="ant-form-item-control-input-content"
+            >
+              <label
+                className="ant-checkbox-wrapper ant-checkbox-wrapper-in-form-item css-dev-only-do-not-override-15rg2km"
+              >
+                <span
+                  className="ant-checkbox css-dev-only-do-not-override-15rg2km"
+                >
+                  <input
+                    checked={false}
+                    className="ant-checkbox-input"
+                    disabled={false}
+                    id="rememberme"
+                    onChange={[Function]}
+                    type="checkbox"
+                  />
+                  <span
+                    className="ant-checkbox-inner"
+                  />
+                </span>
+                <span>
+                  Remember me
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
       className="ant-form-item w-11/12 css-dev-only-do-not-override-15rg2km"
     >
       <div
@@ -230,7 +239,7 @@ exports[`<Registration /> Match Snapshot 1`] = `
                 type="submit"
               >
                 <span>
-                  Register
+                  Login
                 </span>
               </button>
             </div>
@@ -247,7 +256,7 @@ exports[`<Registration /> Match Snapshot 1`] = `
       className="ant-divider-inner-text"
       style={{}}
     >
-      Or, Register with 
+      Or, Login with 
     </span>
   </div>
   <section
@@ -271,7 +280,7 @@ exports[`<Registration /> Match Snapshot 1`] = `
             "color": "transparent",
           }
         }
-        title="Register with Google"
+        title="Login with Google"
         width={40}
       />
     </div>
@@ -293,7 +302,7 @@ exports[`<Registration /> Match Snapshot 1`] = `
             "color": "transparent",
           }
         }
-        title="Register with Facebook"
+        title="Login with Facebook"
         width={40}
       />
     </div>
@@ -315,7 +324,7 @@ exports[`<Registration /> Match Snapshot 1`] = `
             "color": "transparent",
           }
         }
-        title="Register with GitHub"
+        title="Login with GitHub"
         width={40}
       />
     </div>

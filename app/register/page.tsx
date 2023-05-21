@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Registration() {
   return (
     <section
-      className="h-auto min-w-min  m-5 w-11/12 md:w-1/2 py-5 flex flex-col items-center shadow-md"
+      className="h-auto min-w-min  m-5 w-11/12 md:w-1/2 py-5 px-2 flex flex-col items-center shadow-md"
       style={{ maxWidth: "1000px" }}
     >
       <h1 className="font-bold text-3xl m-5">Registration</h1>

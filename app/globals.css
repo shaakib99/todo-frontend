@@ -9,21 +9,17 @@
   --background-start-dark: #333333;
   --text-color-light: #fafafa;
   --text-color-dark: #494545;
-  --border-color-light: #fafafa;
-  --border-color-dark: #e2e2e2;
 }
 
 .dark-theme {
   color: var(--text-color-light);
   background: var(--background-start-dark);
-  border-color: var(--border-color-light);
 }
 
 body {
   transition: 1s ease;
   color: var(--text-color-dark);
   background: var(--background-start-light);
-  border-color: var(--border-color-dark);
 }
 
 svg {

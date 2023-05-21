@@ -54,7 +54,7 @@ export const Navbar = () => {
         <Link
           href="/register"
           className={`${
-            pathName === "/register" && "text-primary"
+            pathName === "/registration" && "text-primary"
           } hover:font-semibold`}
         >
           Register

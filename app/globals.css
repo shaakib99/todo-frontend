@@ -33,10 +33,15 @@ svg {
 .ant-input-password,
 .ant-form,
 .ant-form-item,
-.ant-divider {
+.ant-divider,
+.ant-checkbox-inner,
+.anticon {
   color: inherit !important;
   background-color: inherit !important;
-  border-color: inherit !important;
+}
+
+.ant-checkbox-checked {
+  background-color: #3a86ff;
 }
 
 .ant-btn {

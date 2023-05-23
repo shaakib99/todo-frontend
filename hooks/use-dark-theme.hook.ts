@@ -5,8 +5,8 @@ export const useDarkTheme = (options: {
   onDarkModeRemove?: Function;
 }) => {
   const [isDarkModeOn, setIsDarkModeOn] = useState(false);
-  const onDarkModeActive = options?.onDarkModeActive || function(){}
-  const onDarkModeRemove = options?.onDarkModeRemove || function(){}
+  const onDarkModeActive = options?.onDarkModeActive || function () {};
+  const onDarkModeRemove = options?.onDarkModeRemove || function () {};
 
   useEffect(() => {
     const darkThemeMedia = window?.matchMedia("(prefers-color-scheme: dark)");
@@ -19,7 +19,7 @@ export const useDarkTheme = (options: {
     });
 
     return () => darkThemeMedia.removeEventListener("change", () => {});
-  },[]);
+  }, []);
 
   const setDarkTheme = () => {
     setIsDarkModeOn(true);
@@ -33,5 +33,5 @@ export const useDarkTheme = (options: {
     return onDarkModeRemove();
   };
 
-  return {isDarkModeOn, setDarkTheme, removeDarkTheme };
+  return { isDarkModeOn, setDarkTheme, removeDarkTheme };
 };

@@ -2,7 +2,7 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import CommonLayout from "@/components/common/layout.component";
 
-const PoppinsFont = Poppins({ weight: "200", subsets: ["devanagari"] });
+const PoppinsFont = Poppins({ weight: "400", subsets: ["devanagari"] });
 
 export const metadata = {
   title: "Todo: Home",

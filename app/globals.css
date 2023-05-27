@@ -3,23 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --foreground-light: #333333;
   --background-start-light: #fafafa;
-  --foreground-dark: #fafafa;
   --background-start-dark: #333333;
   --text-color-light: #fafafa;
   --text-color-dark: #3b3b3b;
+  --border-color-light: #e0e0e0;
+  --border-color-dark: #494949;
 }
 
 .dark-theme {
   color: var(--text-color-light);
   background: var(--background-start-dark);
+  border-color: var(--border-color-dark) !important;
 }
 
 body {
   transition: 1s ease;
   color: var(--text-color-dark);
   background: var(--background-start-light);
+  border-color: var(--border-color-light) !important;
 }
 
 svg {
@@ -35,15 +37,26 @@ svg {
 .ant-form-item,
 .ant-divider,
 .ant-checkbox-inner,
-.anticon {
+.ant-checkbox-wrapper,
+.anticon,
+.ant-card,
+.ant-card > *,
+.ant-card-bordered,
+.antd-card-body,
+.antd-card-head {
+  background-color: inherit;
+  border-color: inherit !important;
   color: inherit !important;
-  background-color: inherit !important;
 }
 
+*, ::after, ::before {
+  border-color: inherit !important;
+}
 .ant-checkbox-checked {
   background-color: #3a86ff;
 }
 
 .ant-btn {
   color: inherit !important;
+  font-weight: 400;
 }

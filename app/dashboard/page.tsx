@@ -2,6 +2,7 @@
 
 import { Col, Row } from "antd";
 import TaskBoard from "./components/task-board.component";
+import Countdown from "./components/countdown.component";
 
 export default function Dashboard() {
   return (
@@ -9,7 +10,9 @@ export default function Dashboard() {
       <Col span={18}>
         <TaskBoard />
       </Col>
-      <Col span={6}>Right Side</Col>
+      <Col span={6}>
+        <Countdown />
+      </Col>
     </Row>
   );
 }

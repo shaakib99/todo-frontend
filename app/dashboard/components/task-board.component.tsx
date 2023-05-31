@@ -1,19 +1,24 @@
 "use client";
 
+import { useTaskBoardModel } from "@/hooks/models/taskboard.model";
+import { ITask, eTaskStatus } from "@/interfaces/task.interface";
 import { Card, Col, Row } from "antd";
 import { DragEvent } from "react";
 
 export default function TaskBoard() {
-  const handleDragStart = (ev: DragEvent<HTMLDivElement>) => {
-    ev.dataTransfer.setData("text", "data");
-  };
+  const {
+    data: { isLoading, tasks },
+    moveTask,
+  } = useTaskBoardModel();
 
   const handleDragOver = (ev: DragEvent<HTMLDivElement>) => {
     ev.preventDefault();
   };
 
-  const handleOnDrop = (ev: DragEvent<HTMLDivElement>) => {
+  const handleOnDrop = (ev: DragEvent<HTMLDivElement>, to: eTaskStatus) => {
     ev.preventDefault();
+    const data: ITask = JSON.parse(ev.dataTransfer.getData("data"));
+    moveTask(data, to);
   };
 
   return (
@@ -34,85 +39,86 @@ export default function TaskBoard() {
             <Col
               span={8}
               className=""
-              onDrop={handleOnDrop}
+              onDrop={(ev) => handleOnDrop(ev, eTaskStatus.todo)}
               onDragOver={handleDragOver}
             >
               <section className="w-full grid place-items-center mb-4 border-r">
                 <p className="text-lg font-semibold">Todo</p>
               </section>
               <section>
-                <Card
-                  title="Title"
-                  extra={
-                    <p className="text-primary cursor-pointer">
-                      Move to Active
-                    </p>
-                  }
-                  draggable
-                  className="shadow-lg my-2"
-                >
-                  Hello This is description
-                </Card>
-                <Card
-                  title="Title"
-                  extra={
-                    <p className="text-primary cursor-pointer">
-                      Move to Active
-                    </p>
-                  }
-                  draggable
-                  className="shadow-lg my-2"
-                >
-                  Hello This is description
-                </Card>
+                {tasks?.todo?.map((task) => (
+                  <Card
+                    key={task.id}
+                    title={task.title || ""}
+                    extra={
+                      <p className="text-primary cursor-pointer">
+                        Move to Active
+                      </p>
+                    }
+                    draggable
+                    className="shadow-lg my-2"
+                    onDragStart={(ev) => {
+                      ev.dataTransfer.setData("data", JSON.stringify(task));
+                    }}
+                  >
+                    {task.description}
+                  </Card>
+                ))}
               </section>
             </Col>
             <Col
               span={8}
               className=""
-              onDrop={handleOnDrop}
+              onDrop={(ev) => handleOnDrop(ev, eTaskStatus.active)}
               onDragOver={handleDragOver}
             >
               <section className="w-full grid place-items-center mb-4 border-r">
                 <p className="text-lg font-semibold">Active</p>
               </section>
               <section>
-                <Card
-                  title="Title"
-                  extra={
-                    <p className="text-primary cursor-pointer">
-                      Move to Active
-                    </p>
-                  }
-                  draggable
-                  className="shadow-lg my-2"
-                >
-                  Hello This is description
-                </Card>
+                {tasks?.active?.map((task) => (
+                  <Card
+                    key={task.id}
+                    title={task.title || ""}
+                    extra={
+                      <p className="text-primary cursor-pointer">
+                        Move to Done
+                      </p>
+                    }
+                    draggable
+                    className="shadow-lg my-2"
+                    onDragStart={(ev) => {
+                      ev.dataTransfer.setData("data", JSON.stringify(task));
+                    }}
+                  >
+                    {task.description}
+                  </Card>
+                ))}
               </section>
             </Col>
             <Col
               span={8}
               className=""
-              onDrop={handleOnDrop}
+              onDrop={(ev) => handleOnDrop(ev, eTaskStatus.done)}
               onDragOver={handleDragOver}
             >
               <section className="w-full grid place-items-center mb-4">
                 <p className="text-lg font-semibold">Done</p>
               </section>
               <section>
-                <Card
-                  title="Title"
-                  extra={
-                    <p className="text-primary cursor-pointer">
-                      Move to Active
-                    </p>
-                  }
-                  draggable
-                  className="shadow-lg my-2"
-                >
-                  Hello This is description
-                </Card>
+                {tasks?.done?.map((task) => (
+                  <Card
+                    key={task.id}
+                    title={task.title || ""}
+                    draggable
+                    className="shadow-lg my-2"
+                    onDragStart={(ev) => {
+                      ev.dataTransfer.setData("data", JSON.stringify(task));
+                    }}
+                  >
+                    {task.description}
+                  </Card>
+                ))}
               </section>
             </Col>
           </Row>

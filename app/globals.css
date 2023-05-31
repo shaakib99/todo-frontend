@@ -43,7 +43,10 @@ svg {
 .ant-card > *,
 .ant-card-bordered,
 .antd-card-body,
-.antd-card-head {
+.antd-card-head,
+.ant-statistic,
+.ant-statistic-content,
+.ant-statistic-content-value {
   background-color: inherit;
   border-color: inherit !important;
   color: inherit !important;

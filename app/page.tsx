@@ -27,7 +27,7 @@ export default function Home() {
         </Button>
       </section>
       <section className="h-full mt-3 w-full hidden md:flex items-center justify-center ">
-        <div className="-rotate-6">{TodoAnimation}</div>
+        <div className=" skew-y-6 ease-in duration-300">{TodoAnimation}</div>
       </section>
     </div>
   );

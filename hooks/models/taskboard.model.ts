@@ -46,7 +46,14 @@ export function useTaskBoardModel() {
             description: "Testing description",
           },
         ],
-        active: [],
+        active: [
+          {
+            id: "2",
+            title: "Testing title2",
+            status: eTaskStatus.active,
+            description: "Testing description2",
+          },
+        ],
         done: [],
       },
     }
@@ -54,9 +61,10 @@ export function useTaskBoardModel() {
 
   const moveTask = (task: ITask, queue: eTaskStatus) => {
     if (task?.status === queue) return;
-    
+
     const { tasks = {} } = data;
 
+    // Remove task from currenet queue
     switch (task?.status?.toLowerCase()) {
       case eTaskStatus.todo?.toLowerCase():
         tasks.todo = tasks?.todo?.filter((t) => task?.id != t?.id) || [];
@@ -69,6 +77,7 @@ export function useTaskBoardModel() {
         break;
     }
 
+    // Add task to the desired queue
     switch (queue?.toLowerCase()) {
       case eTaskStatus.todo?.toLowerCase():
         task.status = eTaskStatus.todo;
@@ -86,6 +95,6 @@ export function useTaskBoardModel() {
 
     return dispatch({ type: eActionType.UPDATE_TASKS, payload: { ...tasks } });
   };
-  const moveToNextQueue = (task: ITask) => {};
-  return { data, moveToNextQueue, moveTask };
+
+  return { data, moveTask };
 }

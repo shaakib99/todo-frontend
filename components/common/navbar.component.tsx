@@ -67,9 +67,9 @@ export const Navbar = () => {
         >
           Login
         </Link>
-        <span className="cursor-pointer" onClick={handleThemeToggleBtnClick}>
+        {/* <span className="cursor-pointer" onClick={handleThemeToggleBtnClick}>
           {ThemeToggleBtn}
-        </span>
+        </span> */}
       </section>
     </nav>
   );

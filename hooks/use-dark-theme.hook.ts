@@ -8,18 +8,18 @@ export const useDarkTheme = (options: {
   const onDarkModeActive = options?.onDarkModeActive || function () {};
   const onDarkModeRemove = options?.onDarkModeRemove || function () {};
 
-  useEffect(() => {
-    const darkThemeMedia = window?.matchMedia("(prefers-color-scheme: dark)");
+  // useEffect(() => {
+  //   const darkThemeMedia = window?.matchMedia("(prefers-color-scheme: dark)");
 
-    if (darkThemeMedia.matches) setDarkTheme();
+  //   if (darkThemeMedia.matches) setDarkTheme();
 
-    darkThemeMedia.addEventListener("change", (event) => {
-      if (event.matches) setDarkTheme();
-      else removeDarkTheme();
-    });
+  //   darkThemeMedia.addEventListener("change", (event) => {
+  //     if (event.matches) setDarkTheme();
+  //     else removeDarkTheme();
+  //   });
 
-    return () => darkThemeMedia.removeEventListener("change", () => {});
-  }, []);
+  //   return () => darkThemeMedia.removeEventListener("change", () => {});
+  // }, []);
 
   const setDarkTheme = () => {
     setIsDarkModeOn(true);

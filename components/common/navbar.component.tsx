@@ -46,7 +46,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between px-8 py-4 shadow-sm">
+    <nav className="w-full flex items-center justify-between px-8">
       <section className="font-bold cursor-pointer">
         <Link href={"/"}>{APP_NAME}</Link>
       </section>
@@ -67,9 +67,9 @@ export const Navbar = () => {
         >
           Login
         </Link>
-        {/* <span className="cursor-pointer" onClick={handleThemeToggleBtnClick}>
+        <span className="cursor-pointer w-12" onClick={handleThemeToggleBtnClick}>
           {ThemeToggleBtn}
-        </span> */}
+        </span>
       </section>
     </nav>
   );

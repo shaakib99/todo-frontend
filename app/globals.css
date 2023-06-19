@@ -46,7 +46,12 @@ svg {
 .antd-card-head,
 .ant-statistic,
 .ant-statistic-content,
-.ant-statistic-content-value{
+.ant-statistic-content-value,
+.ant-layout-header,
+.ant-space,
+.ant-space-item,
+.ant-layout,
+.ant-layout-footer{
   background-color: inherit !important;
   border-color: inherit !important;
   color: inherit !important;

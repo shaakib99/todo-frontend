@@ -41,6 +41,7 @@ export default function TaskBoard() {
               className=""
               onDrop={(ev) => handleOnDrop(ev, eTaskStatus.todo)}
               onDragOver={handleDragOver}
+              style={{minHeight: "80vh"}}
             >
               <section className="w-full grid place-items-center mb-4 border-r">
                 <p className="text-lg font-semibold">Todo</p>
@@ -71,6 +72,7 @@ export default function TaskBoard() {
               className=""
               onDrop={(ev) => handleOnDrop(ev, eTaskStatus.active)}
               onDragOver={handleDragOver}
+              style={{minHeight: "80vh"}}
             >
               <section className="w-full grid place-items-center mb-4 border-r">
                 <p className="text-lg font-semibold">Active</p>
@@ -101,6 +103,7 @@ export default function TaskBoard() {
               className=""
               onDrop={(ev) => handleOnDrop(ev, eTaskStatus.done)}
               onDragOver={handleDragOver}
+              style={{minHeight: "80vh"}}
             >
               <section className="w-full grid place-items-center mb-4">
                 <p className="text-lg font-semibold">Done</p>

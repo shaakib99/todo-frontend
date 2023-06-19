@@ -45,13 +45,17 @@ svg {
 .antd-card-body,
 .antd-card-head,
 .ant-statistic,
+.ant-statistic-title,
 .ant-statistic-content,
 .ant-statistic-content-value,
 .ant-layout-header,
 .ant-space,
 .ant-space-item,
 .ant-layout,
-.ant-layout-footer{
+.ant-layout-footer,
+.ant-timeline,
+.ant-timeline-item,
+.ant-timeline-item-head {
   background-color: inherit !important;
   border-color: inherit !important;
   color: inherit !important;

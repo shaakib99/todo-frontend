@@ -8,7 +8,7 @@ import {
 export default function TaskHistory() {
   return (
     <div className="w-full">
-      <p className="text-xl mb-9 text-center">Task History</p>
+      <p className="text-xl mb-5 font-semibold text-center">Task History</p>
       <Timeline
         mode="left"
         items={[
